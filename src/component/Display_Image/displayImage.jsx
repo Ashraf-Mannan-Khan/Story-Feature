@@ -84,12 +84,7 @@ export function DisplayImage({
   console.log(currentIndex);
 
   return (
-    <div
-      className="imageContainer"
-      onTouchStart={handleTouchStart}
-      onTouchMove={handleTouchMove}
-      onTouchEnd={handleTouchEnd}
-    >
+    <div className="imageContainer">
       <div className="progressbarContainer">
         {imageArray.map((src, index) => {
           return (
@@ -102,14 +97,17 @@ export function DisplayImage({
           );
         })}
       </div>
-      <div className="story">
+      <div
+        className="story"
+        
+      >
         <button className="close" onClick={() => setShow(false)}>
           <span>&#10005;</span>
         </button>
         <button
           className="back"
           onClick={() => {
-            setReference((prev) => prev - 1);
+            return setReference((prev) => prev - 1);
           }}
           disabled={currentIndex === 0}
         >
@@ -120,11 +118,14 @@ export function DisplayImage({
           alt="base64Image"
           key={currentIndex}
           className="storyImg"
+          onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}
         />
         <button
           className="forward"
           onClick={() => {
-            setReference((prev) => prev + 1);
+            return setReference((prev) => prev + 1);
           }}
           disabled={currentIndex === imageArray.length - 1}
         >
