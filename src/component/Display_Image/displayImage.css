@@ -21,7 +21,6 @@
   align-self: start;
 }
 .story {
-  position: relative;
   margin-inline: auto;
   width: 100%;
   max-width: 450px;
@@ -34,7 +33,7 @@
 .forward {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
+  transform: translateY(50%);
   background-color: #000000;
   color: #ffffff;
   border: 2px solid black;
@@ -53,7 +52,7 @@
 }
 .close {
   position: absolute;
-  top: 20px;
+  top: 40px;
   right: 20px;
   color: rgb(84, 84, 84);
   background-color: transparent;
@@ -87,21 +86,17 @@ span {
     opacity: 1;
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 568px) {
   .story {
     max-width: 100%;
     width: 500px;
     height: auto;
   }
   .forward {
-    right: 0;
-    z-index: 1000;
-    opacity: 0.2;
+    display: none;
   }
   .back {
-    left: 0;
-    z-index: 1000;
-    opacity: 0.2;
+    display: none;
   }
   .close {
     right: 0;
