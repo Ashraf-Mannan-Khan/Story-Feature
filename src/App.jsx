@@ -48,6 +48,10 @@ const [imageArray, setImageArray] = useState(() => {
           multiple
         />
         <button className="plus" onClick={handleButtonClick}>+</button>
+        <button className="plus" onClick={() => {
+          setImageArray([]);
+          localStorage.clear();
+        }}>-</button>
         {imageArray.map((src, index) => (
           <img
             src={src}
