@@ -6,7 +6,6 @@ const [imageArray, setImageArray] = useState(() => {
   const stored = localStorage.getItem("images");
   return stored ? JSON.parse(stored) : [];
 });
-
   const [reference, setReference] = useState(0);
   const [showImage, setShowImage] = useState(false);
   const [fullScreen, setFullScreen] = useState(false);
