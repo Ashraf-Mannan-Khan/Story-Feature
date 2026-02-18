@@ -1,0 +1,27 @@
+.container {
+    border: 2px solid;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    max-width: 1080px;
+    min-width: fit-content;
+    padding: 10px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    margin-inline: auto;
+}
+
+.plus {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    font-size: 30px;
+    background-color: rgb(237, 235, 235);
+    color: slategray;
+    border: 2px solid slategray;
+}
+
+.containerImage {
+    border-radius: 50%;
+    margin-inline: .5rem
+}
