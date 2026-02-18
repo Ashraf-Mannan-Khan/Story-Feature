@@ -88,9 +88,6 @@ span {
     width: 500px;
     height: auto;
   }
-  .forward, .back {
-    display: none;
-  }
   .close {
     right: 0;
   }

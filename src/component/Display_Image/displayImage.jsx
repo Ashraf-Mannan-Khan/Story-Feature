@@ -86,7 +86,9 @@ export function DisplayImage({
   console.log(currentIndex);
 
   return (
-    <div className="imageContainer">
+    <div className="imageContainer"   onTouchStart={handleTouchStart}
+        onTouchMove={handleTouchMove}
+        onTouchEnd={handleTouchEnd}>
       <div className="progressbarContainer">
         {imageArray.map((src, index) => {
           return (
@@ -101,9 +103,7 @@ export function DisplayImage({
       </div>
       <div
         className="story"
-        onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}
+      
       >
         <button className="close" onClick={() => setShow(false)}>
           <span>&#10005;</span>
