@@ -94,6 +94,6 @@ span {
   }
   .imageContainer {
     backdrop-filter: blur(60px);
-    top: 0;
+    top: -5px;
   }
 }
