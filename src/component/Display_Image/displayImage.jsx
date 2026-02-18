@@ -71,24 +71,25 @@ export function DisplayImage({
     const distance = touchStart.current - touchEnd.current;
 
     if (distance > 50) {
-        if(currentIndex > 0) {
-        console.log('works');
-          setReference((prev) => prev - 1); 
+      if (currentIndex < imageArray.length - 1) {
+        setReference((prev) => prev + 1);
       }
-    
     }
     if (distance < -50) {
-     if (currentIndex < imageArray.length - 1) {
-        setReference((prev) => prev + 1);
+      if (currentIndex > 0) {
+        setReference((prev) => prev - 1);
       }
     }
   }
   console.log(currentIndex);
 
   return (
-    <div className="imageContainer"   onTouchStart={handleTouchStart}
-        onTouchMove={handleTouchMove}
-        onTouchEnd={handleTouchEnd}>
+    <div
+      className="imageContainer"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={handleTouchEnd}
+    >
       <div className="progressbarContainer">
         {imageArray.map((src, index) => {
           return (
@@ -101,10 +102,7 @@ export function DisplayImage({
           );
         })}
       </div>
-      <div
-        className="story"
-      
-      >
+      <div className="story">
         <button className="close" onClick={() => setShow(false)}>
           <span>&#10005;</span>
         </button>
