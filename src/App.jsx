@@ -48,7 +48,7 @@ const [imageArray, setImageArray] = useState(() => {
           multiple
         />
         <button className="plus" onClick={handleButtonClick}>+</button>
-        <button className="plus" onClick={() => {
+        <button className="minus" onClick={() => {
           setImageArray([]);
           localStorage.clear();
         }}>-</button>
@@ -63,7 +63,7 @@ const [imageArray, setImageArray] = useState(() => {
             }}
             height="60px"
             width="60px"
-            className="containerImage"
+            className="smallImage"
           />
         ))}
       </div>

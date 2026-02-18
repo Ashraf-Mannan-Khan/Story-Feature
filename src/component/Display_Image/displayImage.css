@@ -92,4 +92,7 @@ span {
   .close {
     right: 0;
   }
+  .imageContainer {
+    backdrop-filter: blur(60px);
+  }
 }
