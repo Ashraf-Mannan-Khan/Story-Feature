@@ -2,13 +2,12 @@
   position: fixed;
   margin-inline: auto;
   inset: 0;
-  background: white;
+  background: rgba(0, 0, 0, 0.8);
   display: flex;
   z-index: 999;
   animation: fadeIn 0.3s ease;
   flex-direction: column;
   padding: 10px;
-  top: 5px;
 }
 .progressbarContainer {
  margin-top: 1rem;
@@ -94,6 +93,5 @@ span {
   }
   .imageContainer {
     backdrop-filter: blur(60px);
-    top: -5px;
   }
 }
